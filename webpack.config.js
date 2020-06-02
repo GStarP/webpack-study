@@ -21,6 +21,7 @@ module.exports = {
         {
           test: /\.css$/,
           use: [
+            // style-loader 会将 css 样式挂载到 <head> 的 <style> 中
             'style-loader',
             'css-loader'
           ]
@@ -35,7 +36,7 @@ module.exports = {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Caching'
+        title: 'Tree Shaking'
       }),
       // 自动清理 dist 目录
       new CleanWebpackPlugin(),

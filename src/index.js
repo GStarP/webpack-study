@@ -1,11 +1,13 @@
-import _ from 'lodash';
+import { cube } from './math.js';
 import './style.css';
 // import Icon from './icon.jpg';
 // import PrintMe from './print.js';
 
 function component() {
   let element = document.createElement('div');
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = [
+    '5 cubed is equal to ' + cube(5)
+  ];
   element.classList.add('hello');
   // 测试 loader 加载图片
   // let icon = new Image();
